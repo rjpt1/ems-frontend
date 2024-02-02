@@ -1,10 +1,22 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 
 const HeaderComponent = () => {
     return (
         <div>
-            <header className="navbar navbar-dark bg-primary">
+            <header className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <a className="navbar-brand" href="https://www.javaguides.net">Employee Management System</a>
+
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <NavLink className='nav-link' to='/employees'>Employees</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className='nav-link' to='/departments'>Departments</NavLink>
+                            </li>                            
+                        </ul>
+                    </div>
             </header>
         </div>
     )

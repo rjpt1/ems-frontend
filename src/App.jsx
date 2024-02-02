@@ -6,7 +6,8 @@ import ListEmployeeComponent from './components/ListEmployeeComponent'
 import HeaderComponent from './components/HeaderComponent'
 import FooterComponent from './components/FooterComponent'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import EmployeeComponent from './components/EmployeeComponent';
+import EmployeeComponent from './components/EmployeeComponent'
+import ListDeparComponent from './components/ListDepartmentComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,10 @@ function App() {
           {/*  http://localhost:3000/add-employee */}
           <Route path='/add-employee' element={<EmployeeComponent/>}></Route>
           {/*  http://localhost:3000/edit-employee/7 */}
-          <Route path='/edit-employee/:id' element={<EmployeeComponent/>}></Route>          
+          <Route path='/edit-employee/:id' element={<EmployeeComponent/>}></Route> 
+
+          {/*  http://localhost:3000/departments */}
+          <Route path='/departments' element={<ListDeparComponent/>}></Route>         
         </Routes>
         <FooterComponent/>
       </BrowserRouter>
